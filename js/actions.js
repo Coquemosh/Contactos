@@ -20,7 +20,7 @@ document.addEventListener("deviceready",function(){
 });
 
 function listarContactos(){
-    function on Success(contacts) {
+    function onSuccess(contacts) {
         $'#lista').html(''); // lo vaciamos aunque no tenga nada.
         for(i=0;i<contacts.length;i++){
             $('<li class="forward"><a href="tel:'+contacts[i].phoneNumbers[0].value+'">'+contacts[i].name.formatted+'</a></li>').appendTo('#lista');
