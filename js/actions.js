@@ -1,5 +1,7 @@
 // Actions
 $(function(){
+    
+document.addEventListener("deviceready",function(){
     $('#cBtn').tap(function(){
         var nom = $('#cName').val();
         var ema = $('#cMail').val();
@@ -14,6 +16,7 @@ $(function(){
     $('#btnListar').tap(function(){
         listarContactos();
     });
+},false);
 });
 
 function listarContactos(){
