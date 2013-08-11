@@ -9,7 +9,7 @@ document.addEventListener("deviceready",function(){
         
         if(nom!='' && ema!='' && tel!=''){
             //alert(nom+' '+ema+' '+tel);
-            crearContactio(nom, ema, tel);
+            crearContacto(nom, ema, tel);
         }
     });
     
