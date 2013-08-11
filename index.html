@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Contactos</title>
+        <link rel="stylesheet" href="css/jqtouch.css" title="jQTouch">
+        <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/actions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/phonegap.js" type="text/javascript" charset="utf-8"></script>
+        <!-- Uncomment the following two lines (and comment out the previous two) to use jQuery instead of Zepto. -->
+        <!-- <script src="../../src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script> -->
+        <!-- <script src="../../src/jqtouch-jquery.min.js" type="application/x-javascript" charset="utf-8"></script> -->
+        <script type="text/javascript" charset="utf-8">
+            var jQT = new $.jQTouch({
+                themeSelectionSelector: '#jqt'
+            });
+        </script>
+        <style type="text/css" media="screen">
+            #jqt.fullscreen #home .info {
+                display: none;
+            }
+            div#jqt #about {
+                padding: 100px 10px 40px;
+                text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0;
+                color: #999;
+                font-size: 13px;
+                text-align: center;
+                background: #161618;
+            }
+            div#jqt #about p {
+                margin-bottom: 8px;
+            }
+            div#jqt #about a {
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="jqt">
+            <div id="about" class="selectable">
+                    <p><strong>Contactos</strong><br>Version 1.0<br>
+                        <a>Por Jorge Lira</a></p>
+                    <p><em>Pràctica de acceso a contactos<br>del dispositivo.</em></p>
+                    <p>
+                        <a target="_blank" href="http://twitter.com/Coquemosh">@Coquemosh on Twitter</a>
+                    </p>
+                    <p><br><br><a href="#" class="grayButton goback">Cerrar</a></p>
+            </div>
+            <div id="home" class="current">
+                <div class="toolbar">
+                    <h1>Contactos</h1>
+                    <a class="button slideup" id="infoButton" href="#about">Info</a>
+                </div>
+                <div class="scroll">
+                    <ul class="rounded">
+                        <li class="arrow"><a href="#" id="btnListar">Agenda <small class="counter">0</small></a> </li>
+                        <li class=""><a href="#new">Nuevo Contacto <small class="counter">+</small></a></li>
+                    </ul>
+                    <h2>Lista de Contactos</h2>
+                    <ul class="rounded" id="lista">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="new">
+                <div class="toolbar">
+                    <h1>Nuevo Contacto</h1>
+                    <a href="#" class="back">Cancelar</a>
+                </div>
+                <ul class="plastic scroll">
+                    <li><input type="text" id="cName" placeholder="Nombre(s)" /></li>
+                    <li><input type="email" id="cMail" placeholder="Correo Electrònico" /></li>
+                    <li><input type="tel" id="cTel" placeholder="Teléfono" /></li>
+                    <li style="text-align:center; background:#848484;"><a href="#" id="cBtn">Crear</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
