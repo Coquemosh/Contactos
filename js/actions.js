@@ -25,7 +25,7 @@ function listarContactos(){
         for(i=0;i<contacts.length;i++){
             $('<li class="forward"><a href="tel:'+contacts[i].phoneNumbers[0].value+'">'+contacts[i].name.formatted+'</a></li>').appendTo('#lista');
         }
-    }
+    };
     
     function onError(contactError) {
         alert('onError!');
