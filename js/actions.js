@@ -42,6 +42,7 @@ function listarContactos(){
 }
 
 function crearContacto(nom,ema,tel){
+    alert('WTF');
     // Creamos Contacto
     var myContact = navigator.contacts.create();
     
@@ -101,16 +102,14 @@ function crearContacto(nom,ema,tel){
     myContact.phoneNumbers = telefono;
     
     //Guardar Contacto
-    myContact.save(function(){
+     myContact.save(function(){
         $('#cName').val('');
         $('#cMail').val('');
         $('#cTel').val('');
-        
         navigator.notification.alert("Contacto Creado Satisfactoriamente",function(){
-            window.location.href="#home";   
+            window.location.href="#home";
         },"Felicidades","Aceptar");
-    }, function(err){
+    },function(err){
         alert(err.code);
     });
-    
 }
